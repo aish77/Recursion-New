@@ -11,8 +11,9 @@ public class PermutationsWithSpaces {
             System.out.println(output);
             return;
         }
-        solvePermutationsWithSpaces(input.substring(1), output+" "+input.charAt(0));
         solvePermutationsWithSpaces(input.substring(1), output+input.charAt(0));
+        solvePermutationsWithSpaces(input.substring(1), output+" "+input.charAt(0));
+
         return;
     }
 }

@@ -1,13 +1,14 @@
-import java.util.*;
+import java.util.Set;
+import java.util.TreeSet;
 
-public class uniqueSubsets {
-
-    static Set<String> inputList = new HashSet<>();
+public class SortedUniqueSubsets {
+    static Set<String> inputList = new TreeSet<>();
 
 
 
     public static void main(String[] args) {
         solveSubsets("abcc", "");
+        System.out.println(inputList);
 
     }
     static void solveSubsets(String input, String output){
@@ -15,9 +16,9 @@ public class uniqueSubsets {
 
         if(input.length() == 0){
             if(inputList.contains(output))
-            return;
+                return;
             inputList.add(output);
-            System.out.println(output);
+
             return;
         }
 
